@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '^7k11m06jn1_ln7rtp@sfyi5f6or6kj@&+*x5=+)98t@vr3m6_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','dharmawines.herokuapp.com']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -125,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 if DEBUG:
    STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static')
-  ]
+   os.path.join(BASE_DIR, 'static'),
+   ]
 else:
    STATIC_ROOT = os.path.join(BASE_DIR,'static')
