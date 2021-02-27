@@ -29,7 +29,7 @@ SECRET_KEY = '^7k11m06jn1_ln7rtp@sfyi5f6or6kj@&+*x5=+)98t@vr3m6_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','dharmawines.herokuapp.com']
 
 
 # Application definition
