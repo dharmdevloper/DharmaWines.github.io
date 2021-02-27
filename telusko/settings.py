@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+import django_heroku
+
+
 import os
 
 from django.contrib.messages import constants as messages
@@ -130,3 +133,7 @@ if DEBUG:
    ]
 else:
    STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+
+
+django_heroku.settings(locals())
